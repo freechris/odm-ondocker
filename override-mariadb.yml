@@ -1,0 +1,32 @@
+version: '2'
+services:
+  dbserver:
+    build:
+        dockerfile: ./${ODMDOCKERDIR}/databases/mariadb/Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD=odm
+      - MYSQL_DATABASE=odmdb
+      - MYSQL_USER=odm
+      - MYSQL_PASSWORD=odm
+    ports:
+    - 3306:3306
+
+  decisionserverconsole:
+    build:
+      args:
+        - DRIVER_URL=$DRIVER_URL_MARIADB
+    
+  decisionrunner:
+    build:
+      args:
+        - DRIVER_URL=$DRIVER_URL_MARIADB
+
+  decisionserverruntime:
+    build:
+      args:
+        - DRIVER_URL=$DRIVER_URL_MARIADB
+
+  decisioncenter:
+    build:
+      args:
+        - DRIVER_URL=$DRIVER_URL_MARIADB

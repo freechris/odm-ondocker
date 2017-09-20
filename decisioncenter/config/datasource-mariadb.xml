@@ -1,0 +1,16 @@
+<server>
+  <!-- decision center datasource -->
+  <library id="MariaDbLib">
+    <fileset dir="${server.config.dir}/resources"/>
+  </library>
+  
+  <jdbcDriver id="MariaDbDriver" 
+  		javax.sql.XADataSource="org.mariadb.jdbc.MariaDbDataSource"
+		javax.sql.ConnectionPoolDataSource="org.mariadb.jdbc.MariaDbDataSource"
+		libraryRef="MariaDbLib"/>
+  	
+  <dataSource id="dcdatasource" jndiName="jdbc/ilogDataSource" jdbcDriverRef="MariaDbDriver" type="javax.sql.ConnectionPoolDataSource">
+    <properties databaseName="odmdb" user="odm" password="odm" serverName="dbserver" portNumber="3306"/>
+  </dataSource>
+
+</server>
