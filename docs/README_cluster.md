@@ -1,5 +1,5 @@
 
-This part will show you how to start  an ODM Cluster Docker topology for development using Docker Compose.
+This part shows you how to start an Operational Decision Manager docker cluster topology for development using Docker Compose.
 
 
 ![Flow](images/ClusterFig01.png)
