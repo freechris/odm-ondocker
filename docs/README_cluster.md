@@ -1,6 +1,7 @@
 
 This tutorial explains how to start an Operational Decision Manager docker cluster topology for development, using Docker Compose. It applies to Operational Decision Management Standard V8.9.0.1 and to earlier versions up to v8.8.x.
 
+
 ![Flow](images/ClusterFig01.png)
 
 
@@ -8,12 +9,12 @@ This tutorial explains how to start an Operational Decision Manager docker clust
 
 Before you proceed, install [Docker and Docker Compose](https://docs.docker.com/compose/#installation-and-set-up).
 
-### Installing ODM
+### Install ODM
 To create Operational Decision Manager docker images, install one of the following components:         
 * Decision Center, with the WebSphere Liberty Profile option,
-* Decision Server Rules with the WebSphere Liberty Profile option.
+* Decision Server Rules, with the WebSphere Liberty Profile option.
 
-Go to the installation directory of ODM and locate the the required WAR files in the directories specified below:
+Go to the installation directory of ODM and locate the required WAR files in the directories specified below:
 
 *installation_directory/executionserver/applicationservers/WLP855/res.war*
 
@@ -25,11 +26,11 @@ Go to the installation directory of ODM and locate the the required WAR files in
 
 *installation_directory/executionserver/applicationservers/WLP855/DecisionRunner.war*
 
-### Clone the odm-ondocker code.
+### Clone the odm-ondocker code
 
 In the ODM installation directory, enter ```git clone https://github.com/ODMDev/odm-ondocker.git```.
 
-### Copy the .dockerignore file.
+### Copy the .dockerignore file
 
 Copy the odm-ondocker/resources/.dockerignore file in the ODM installation directory.
 
@@ -38,7 +39,7 @@ Copy the odm-ondocker/resources/.dockerignore file in the ODM installation direc
 When the copy is complete, the content of you repository should be similar to this:
 
 ![Flow](images/Fig2.png)
-### Verify that Docker Engine and Docker Compose are running.
+### Verify that Docker Engine and Docker Compose are running
 
 Open a command prompt and run the following two commands:    	
 
@@ -51,7 +52,7 @@ Open a command prompt and run the following two commands:
 
 Now you are ready to build and run the docker images.
 
-## Build and run the docker image.
+## Building and running the docker image.
 Open a command prompt in the directory **installation_directory/odm-ondocker** and run the following command:    	
 
 ```
@@ -69,7 +70,7 @@ This command builds, creates, and runs six docker containers:
 
 If the docker container is not already built, Docker Compose builds it and runs it.
 
-You could also start only one of the components.
+You could also start only one of the ODM components.
 
 For example: ```docker-compose -f odm-cluster.yml up decisioncenter``` starts the Decision Center and its dependencies, including the dbserver Derby Network server.
 
