@@ -36,7 +36,7 @@ Copy the odm-ondocker/resources/.dockerignore file in the ODM installation direc
 
 ```cp odm-ondocker/resources/.dockerignore ./```
 
-When the copy is complete, the content of you repository should be similar to this:
+When the copy is complete, the content of your repository should be similar to this:
 
 ![Flow](images/Fig2.png)
 ### Verify that Docker Engine and Docker Compose are running
@@ -52,7 +52,7 @@ Open a command prompt and run the following two commands:
 
 Now you are ready to build and run the docker images.
 
-## Building and running the docker image.
+## Building and running the docker image
 Open a command prompt in the directory **installation_directory/odm-ondocker** and run the following command:    	
 
 ```
