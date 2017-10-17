@@ -1,20 +1,19 @@
 
-This tutorial shows you how to start an Operational Decision Manager docker cluster topology for development, using Docker Compose. It applies to Operational Decision Management Standard V8.9.0.1 and to earlier versions up to v8.8.x.
+This tutorial explains how to start an Operational Decision Manager docker cluster topology for development, using Docker Compose. It applies to Operational Decision Management Standard V8.9.0.1 and to earlier versions up to v8.8.x.
 
 ![Flow](images/ClusterFig01.png)
 
 
+## Setting up your environment
 
-Before you start, you must install [Docker and Docker Compose](https://docs.docker.com/compose/#installation-and-set-up).
+Before you proceed, install [Docker and Docker Compose](https://docs.docker.com/compose/#installation-and-set-up).
 
-## Setup your environment
-
-### ODM Installation.
+### Installing ODM
 To create Operational Decision Manager docker images, install one of the following components:         
-* Decision Center (WebSphere Liberty Profile option)
-* Decision Server Rules (WebSphere Liberty Profile option)
+* Decision Center, with the WebSphere Liberty Profile option,
+* Decision Server Rules with the WebSphere Liberty Profile option.
 
-On the file system where you installed IBM ODM V8.8.x or V8.9.x with the WebSphere Liberty Profile option, find the required WAR files at the following locations:
+Go to the installation directory of ODM and locate the the required WAR files in the directories specified below:
 
 *installation_directory/executionserver/applicationservers/WLP855/res.war*
 
@@ -26,17 +25,17 @@ On the file system where you installed IBM ODM V8.8.x or V8.9.x with the WebSphe
 
 *installation_directory/executionserver/applicationservers/WLP855/DecisionRunner.war*
 
-### Clone the odm-ondocker code
+### Clone the odm-ondocker code.
 
-```git clone https://github.com/ODMDev/odm-ondocker.git``` in the IBM ODM installation directory.
+In the ODM installation directory, enter ```git clone https://github.com/ODMDev/odm-ondocker.git```.
 
-### Copy .dockerignore file
+### Copy the .dockerignore file.
 
-Copy the odm-ondocker/resources/.dockerignore file in your ODM installation directory.
+Copy the odm-ondocker/resources/.dockerignore file in the ODM installation directory.
 
 ```cp odm-ondocker/resources/.dockerignore ./```
 
-When this step completes, you should have something like that :
+When the copy is complete, the content of you repository should be similar to this:
 
 ![Flow](images/Fig2.png)
 ### Verify that Docker Engine and Docker Compose are running.
@@ -52,7 +51,7 @@ Open a command prompt and run the following two commands:
 
 Now you are ready to build and run the docker images.
 
-## Build and run the docker image
+## Build and run the docker image.
 Open a command prompt in the directory **installation_directory/odm-ondocker** and run the following command:    	
 
 ```
