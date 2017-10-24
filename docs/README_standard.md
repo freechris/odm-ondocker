@@ -90,6 +90,6 @@ You can check the container status with the following command:
 ```
  docker-compose ps
 ```
- The following screen capture displays the list of running containers.
+ This screen capture displays the list of running containers.
 
 ![Flow](images/StandardFig02.png)
