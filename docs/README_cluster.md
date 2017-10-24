@@ -14,7 +14,7 @@ To create Operational Decision Manager docker images, install one of the followi
 * Decision Center, with the WebSphere Liberty Profile option,
 * Decision Server Rules, with the WebSphere Liberty Profile option.
 
-Go to the installation directory of ODM and locate the required WAR files in the directories specified below:
+Go to the Operational Decision Manager installation directory and locate the required WAR files in the directories listed below:
 
 *installation_directory/executionserver/applicationservers/WLP855/res.war*
 
@@ -28,11 +28,11 @@ Go to the installation directory of ODM and locate the required WAR files in the
 
 ### Clone the odm-ondocker code
 
-In the ODM installation directory, enter ```git clone https://github.com/ODMDev/odm-ondocker.git```.
+In the installation directory, enter ```git clone https://github.com/ODMDev/odm-ondocker.git```.
 
 ### Copy the .dockerignore file
 
-Copy the odm-ondocker/resources/.dockerignore file in the ODM installation directory.
+Copy the odm-ondocker/resources/.dockerignore file into the ODM installation directory.
 
 ```cp odm-ondocker/resources/.dockerignore ./```
 
@@ -59,7 +59,7 @@ Open a command prompt in the directory **installation_directory/odm-ondocker** a
 docker-compose -f odm-cluster.yml up
 ```
 
-This command builds, creates, and runs six docker containers:
+This command builds, creates, and runs these six docker containers:
 
 * Embedded Derby database
 * Load balancer high availability proxy server
@@ -68,11 +68,11 @@ This command builds, creates, and runs six docker containers:
 * ODM Decision Center
 * ODM Decision Runner
 
-If the docker container is not already built, Docker Compose builds it and runs it.
+Docker Compose builds and runs the containers if they are not already built.
 
-You could also start only one of the ODM components.
+You can also choose to start only one Operational Decision Manager component. For example, this command line starts Decision Center and its dependencies, including the dbserver Derby Network server.
 
-For example: ```docker-compose -f odm-cluster.yml up decisioncenter``` starts the Decision Center and its dependencies, including the dbserver Derby Network server.
+```docker-compose -f odm-cluster.yml up decisioncenter```
 
 You can access the application with these URLs:
 
