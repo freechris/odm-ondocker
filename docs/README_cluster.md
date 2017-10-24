@@ -9,7 +9,7 @@ This tutorial explains how to start an Operational Decision Manager docker clust
 
 Before you proceed, install [Docker and Docker Compose](https://docs.docker.com/compose/#installation-and-set-up).
 
-### Install ODM
+### Install Operational Decision Manager
 To create Operational Decision Manager docker images, install one of the following components:         
 * Decision Center, with the WebSphere Liberty Profile option,
 * Decision Server Rules, with the WebSphere Liberty Profile option.
