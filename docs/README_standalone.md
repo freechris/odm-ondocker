@@ -30,7 +30,7 @@ Go to the Operational Decision Manager installation directory and locate the req
 
 ### Clone the odm-ondocker code
 
-In the installation directory, enter ```git clone https://github.com/ODMDev/odm-ondocker.git```. 
+From the ODM installation directory, enter ```git clone https://github.com/ODMDev/odm-ondocker.git```. 
 
 ### Copy .dockerignore file
 
