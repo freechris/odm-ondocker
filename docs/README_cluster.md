@@ -93,13 +93,13 @@ docker-compose -f odm-cluster.yml scale decisionserverruntime=2
 
 You should see two runtime environments attached to the Rule Execution Server console. The load balancer is configured with a round robin algorithm, the default load-balancing logic that dispatches a new request to the next cluster member in a circular list.
 
-## Verify the Docker images
+## Verifying the docker images
 
 You can check the container status with the following command:
 ```
  docker-compose ps
 ```
- This screen capture shows the list of running containers.
+ This screen capture displays the list of running containers.
 
 ![Flow](images/StandardFig02.png)
 
